@@ -66,6 +66,7 @@ module.exports = {
       {
         name: 'Goldman Sachs',
         description: 'New Analyst (GIR Engineering), August 2020 - Present',
+        link: '',
       },
       {
         name: 'INTELLLEX & SGInnovate',
@@ -80,10 +81,12 @@ module.exports = {
       {
         name: 'DSO National Laboratories',
         description: 'Cyber Analytics Research Intern, May 2018 - August 2018',
+        link: '',
       },
       {
         name: 'Singapore Management University',
         description: 'Teaching Assistant & Student Assistant, May 2017 - April 2019',
+        link: '',
       },
     ],
     // Optional: List your skills, they must have `name` and `description`.
