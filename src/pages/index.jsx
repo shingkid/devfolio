@@ -9,12 +9,14 @@ import SectionBlog from '../components/section-blog';
 import SectionExperience from '../components/section-experience';
 import SectionEducation from '../components/section-education';
 import SectionProjects from '../components/section-projects';
+import SectionResearch from '../components/section-research';
 import SectionSkills from '../components/section-skills';
 import SEO from '../components/seo';
 
 const Index = ({ data }) => {
   const about = get(data, 'site.siteMetadata.about', false);
   const projects = get(data, 'site.siteMetadata.projects', false);
+  const research = get(data, 'site.siteMetadata.research', false);
   const posts = data.allMarkdownRemark.edges;
   const experience = get(data, 'site.siteMetadata.experience', false);
   const education = get(data, 'site.siteMetadata.education', false);
@@ -27,6 +29,7 @@ const Index = ({ data }) => {
       <Header metadata={data.site.siteMetadata} noBlog={noBlog} />
       {about && <SectionAbout about={about} />}
       {projects && projects.length && <SectionProjects projects={projects} />}
+      {research && research.length && <SectionResearch research={research} />}
       {!noBlog && <SectionBlog posts={posts} />}
       {experience && experience.length && (
         <SectionExperience experience={experience} />
@@ -53,6 +56,11 @@ export const pageQuery = graphql`
         github
         linkedin
         projects {
+          name
+          description
+          link
+        }
+        research {
           name
           description
           link
