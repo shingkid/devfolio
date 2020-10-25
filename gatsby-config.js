@@ -37,28 +37,31 @@ module.exports = {
         link: 'https://github.com/shingkid/base-location-optimization',
       },
       {
-        name: 'Plugin to a Healthier Life: A Web Browser Plugin for Mental Health Monitoring (2019)',
-        description:
-          'A web plugin that aims to push relevant mental health content, by tracking the fluctuations of the users\' daily moods, searches, and work schedules. The poster paper for this project was accepted to the 2019 IEEE International Conference on Big Data.',
-        link: 'https://ieeexplore.ieee.org/document/9005522',
-      },
-      {
         name: 'Crowd Evacuation Simulation (2019)',
         description:
           'An agent-based simulation to discover factors which significantly impede crowd evacuation and the extent of human stampede impact on survival using Netlogo.',
         link: 'https://github.com/shingkid/crowd-evacuation-simulation',
       },
       {
-        name: 'Data Mining Approach to the Detection of Suicide in Social Media: A Case Study of Singapore (2018)',
-        description:
-          'An NLP project focused on the social phenomenon of suicide. Relevant posts and comments on Reddit were scraped and analyzed to better understand different aspects of human life that relate to suicide. The poster paper for this project was accepted to the 2018 IEEE International Conference on Big Data.',
-        link: 'https://ieeexplore.ieee.org/document/8622528',
-      },
-      {
         name: 'Terra Matter Waste Management (2018)',
         description:
           'A mobile app for users to earn cash on the side while helping to save the earth by selling their recyclables. Available on both iOS and Android devices.',
         link: 'https://play.google.com/store/apps/details?id=com.terramatter.terraapp',
+      },
+    ],
+    // Custom
+    research: [
+      {
+        name: 'Plugin to a Healthier Life: A Web Browser Plugin for Mental Health Monitoring (2019)',
+        description:
+          'A web plugin that aims to push relevant mental health content, by tracking the fluctuations of the users\' daily moods, searches, and work schedules. The poster paper for this project was accepted to the 2019 IEEE International Conference on Big Data.',
+        link: 'https://ieeexplore.ieee.org/document/9005522',
+      },
+      {
+        name: 'Data Mining Approach to the Detection of Suicide in Social Media: A Case Study of Singapore (2018)',
+        description:
+          'An NLP project focused on the social phenomenon of suicide. Relevant posts and comments on Reddit were scraped and analyzed to better understand different aspects of human life that relate to suicide. The poster paper for this project was accepted to the 2018 IEEE International Conference on Big Data.',
+        link: 'https://ieeexplore.ieee.org/document/8622528',
       },
     ],
     // Optional: List your experience, they must have `name` and `description`. `link` is optional.
