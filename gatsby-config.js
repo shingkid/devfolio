@@ -89,6 +89,24 @@ module.exports = {
         link: '',
       },
     ],
+    // Custom
+    education: [
+      {
+        name: 'Singapore Management University, August 2016 - June 2020',
+        description: 'BSc in Information Systems with 2nd major in Analytics (Advanced Technology), summa cum laude',
+        link: '',
+      },
+      {
+        name: 'The University of Edinburgh, September 2019 - December 2019',
+        description: 'International Student Exchange Programme',
+        link: '',
+      },
+      {
+        name: 'University of Oxford, June 2017 - July 2017',
+        description: 'Exeter College Summer Programme',
+        link: 'https://www.exeter.ox.ac.uk/ecsp/',
+      },
+    ],
     // Optional: List your skills, they must have `name` and `description`.
     skills: [
       {
