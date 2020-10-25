@@ -7,7 +7,7 @@ module.exports = {
     // Main Site Title
     title: `Jane Seah | Software Engineer`,
     // Description that goes under your name in main bio
-    description: `Aspiring machine learning engineer`,
+    description: `Software Engineer`,
     // Optional: Twitter account handle
     author: `@shingkid`,
     // Optional: Github account URL
@@ -33,25 +33,25 @@ module.exports = {
       {
         name: 'Law Enforcement Vehicle Location Optimization (2019)',
         description:
-          'This project aims to recommend effective deployment locations for police emergency response cars. When an emergency ‘999’ call is made, a car will be dispatched from its base location to respond. The time between the placing of the call and the arrival of a car at an incident can be critical in preventing crimes and protecting citizens. Given that response resources are finite and incident occurrences are not uniformly distributed, the choice of base location can have a significant impact on the ability of cars to respond quickly to incidents. We were awarded Best Performing Team for achieving the lowest response failure rates for both normal and high demand evaluation cases.',
+          'An algorithm for recommending effective deployment locations for police emergency response cars which achieved the lowest response failure rates for both normal and high demand evaluation cases. Awarded Best Performing Team.',
         link: 'https://github.com/shingkid/base-location-optimization',
       },
       {
         name: 'Plugin to a Healthier Life: A Web Browser Plugin for Mental Health Monitoring (2019)',
         description:
-          'This project seeks to explore how relevant mental health help can be served as soft nudges to SMU students who may need it, in a private way, through the use of a web plugin. By tracking the fluctuations of the users\' daily moods, searches, and work schedules, the web plugin aims to push relevant mental health content to the users, to prevent them from spiralling deeper into anxiety or depression. The poster paper for this project was accepted to the 2019 IEEE International Conference on Big Data.',
+          'A web plugin that aims to push relevant mental health content, by tracking the fluctuations of the users\' daily moods, searches, and work schedules. The poster paper for this project was accepted to the 2019 IEEE International Conference on Big Data.',
         link: 'https://ieeexplore.ieee.org/document/9005522',
       },
       {
         name: 'Crowd Evacuation Simulation (2019)',
         description:
-          'This project attempts to discover factors which significantly impede crowd evacuation and the extent of human stampede impact on survival. Our agent-based simulation is modelled on a hypothetical fire emergency during Singapore\'s National Day Parade at The Float @ Marina Bay using NetLogo.',
+          'An agent-based simulation to discover factors which significantly impede crowd evacuation and the extent of human stampede impact on survival using Netlogo.',
         link: 'https://github.com/shingkid/crowd-evacuation-simulation',
       },
       {
         name: 'Data Mining Approach to the Detection of Suicide in Social Media: A Case Study of Singapore (2018)',
         description:
-          'In this research, we focus on the social phenomenon of suicide. Specifically, we perform social sensing on digital traces obtained from Reddit. We analyze the posts and comments in that are related to suicide. We perform natural language processing to better understand different aspects of human life that relate to suicide. The poster paper for this project was accepted to the 2018 IEEE International Conference on Big Data.',
+          'An NLP project focused on the social phenomenon of suicide. Relevant posts and comments on Reddit were scraped and analyzed to better understand different aspects of human life that relate to suicide. The poster paper for this project was accepted to the 2018 IEEE International Conference on Big Data.',
         link: 'https://ieeexplore.ieee.org/document/8622528',
       },
       {
