@@ -7,7 +7,7 @@ module.exports = {
     // Main Site Title
     title: `Jane Seah | Software Engineer`,
     // Description that goes under your name in main bio
-    description: `Software Engineer`,
+    description: `Software Engineer based in Singapore.`,
     // Optional: Twitter account handle
     author: `@shingkid`,
     // Optional: Github account URL
@@ -15,7 +15,7 @@ module.exports = {
     // Optional: LinkedIn account URL
     linkedin: `https://www.linkedin.com/in/janeseah/`,
     // Content of the About Me section
-    about: `A highly driven problem-solver passionate about building impactful, scalable, quality software, with a special interest in using data for good.`,
+    about: `A highly driven problem-solver passionate about building impactful, scalable, quality software, with a special interest in using data for good. I recently graduated with an Information Systems & Analytics degree as a SG:Digital Scholar and now develop with cloud and big data technologies at Goldman Sachs Engineering.`,
     // Optional: List your projects, they must have `name` and `description`. `link` is optional.
     projects: [
       {
@@ -95,18 +95,18 @@ module.exports = {
     // Custom
     education: [
       {
-        name: 'Singapore Management University, August 2016 - June 2020',
-        description: 'BSc in Information Systems with 2nd major in Analytics (Advanced Technology), summa cum laude',
+        name: 'Singapore Management University',
+        description: 'BSc in Information Systems & Analytics, summa cum laude, August 2016 - June 2020',
         link: '',
       },
       {
-        name: 'The University of Edinburgh, September 2019 - December 2019',
-        description: 'International Student Exchange Programme',
+        name: 'The University of Edinburgh',
+        description: 'International Student Exchange Programme, September 2019 - December 2019',
         link: '',
       },
       {
-        name: 'University of Oxford, June 2017 - July 2017',
-        description: 'Exeter College Summer Programme',
+        name: 'University of Oxford',
+        description: 'Exeter College Summer Programme, June 2017 - July 2017',
         link: 'https://www.exeter.ox.ac.uk/ecsp/',
       },
     ],
