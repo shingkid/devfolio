@@ -115,7 +115,7 @@ module.exports = {
       {
         name: 'Languages & Frameworks',
         description:
-          'Java, Spring, Python, Django, Flask, Clojure, JavaScript (ES6+), Ruby',
+          'Java, Spring, Python, Django, Flask, Clojure, Ruby',
       },
       {
         name: 'Databases',
@@ -124,7 +124,7 @@ module.exports = {
       {
         name: 'Other',
         description:
-          'Git, Docker, Amazon Web Services (AWS), CI / CD, Microservices, API design, Agile / Scrum',
+          'Git, Docker, Amazon Web Services (AWS), Microservices, Apache Kafka, GraphQL',
       },
     ],
   },
