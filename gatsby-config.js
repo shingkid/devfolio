@@ -106,7 +106,7 @@ module.exports = {
       },
       {
         name: 'University of Oxford',
-        description: 'Exeter College Summer Programme, June 2017 - July 2017',
+        description: 'Exeter College Summer Programme, July 2017 - August 2017',
         link: 'https://www.exeter.ox.ac.uk/ecsp/',
       },
     ],
