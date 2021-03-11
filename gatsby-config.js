@@ -14,6 +14,8 @@ module.exports = {
     github: `https://github.com/shingkid`,
     // Optional: LinkedIn account URL
     linkedin: `https://www.linkedin.com/in/janeseah/`,
+    // Custom: Download resume
+    resume: `Jane-Seah-Resume.pdf`,
     // Content of the About Me section
     about: `A highly driven problem-solver passionate about building impactful, scalable, quality software, with a special interest in using data for good. I recently graduated with an Information Systems & Analytics degree as a SG:Digital Scholar and now develop with cloud and big data technologies at Goldman Sachs Engineering.`,
     // Optional: List your projects, they must have `name` and `description`. `link` is optional.
