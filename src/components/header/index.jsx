@@ -63,7 +63,7 @@ const Header = ({ metadata = {}, noBlog = false }) => {
           {resume && (
             <li className={classes.item}>
             <a className={classes.link} href={resume}>
-              Resume
+              Résumé
             </a>
           </li>
           )}
