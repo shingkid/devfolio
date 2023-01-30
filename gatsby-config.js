@@ -23,7 +23,7 @@ module.exports = {
       {
         name: 'Dr Watson (2020)',
         description:
-          'A prototype smart evacuation and rescue system that leverages data from WiFi, CCTVs and sound sensors to locate crowds, identify trapped or vulnerable occupants, compute optimal escape routes and provide real-time visualization of vital information for quick and effective decision-making by rescuers. 1st Prize @ the SCDF X IBM - Lifesavers\' Innovation Challenge: Call For Code 2020.',
+          "A prototype smart evacuation and rescue system that leverages data from WiFi, CCTVs and sound sensors to locate crowds, identify trapped or vulnerable occupants, compute optimal escape routes and provide real-time visualization of vital information for quick and effective decision-making by rescuers. 1st Prize @ the SCDF X IBM - Lifesavers' Innovation Challenge: Call For Code 2020.",
         link: 'http://dr-watson-to-the-rescue.s3-website-ap-southeast-1.amazonaws.com/',
       },
       {
@@ -56,7 +56,7 @@ module.exports = {
       {
         name: 'Plugin to a Healthier Life: A Web Browser Plugin for Mental Health Monitoring (2019)',
         description:
-          'A web plugin that aims to push relevant mental health content, by tracking the fluctuations of the users\' daily moods, searches, and work schedules. The poster paper for this project was accepted to the 2019 IEEE International Conference on Big Data.',
+          "A web plugin that aims to push relevant mental health content, by tracking the fluctuations of the users' daily moods, searches, and work schedules. The poster paper for this project was accepted to the 2019 IEEE International Conference on Big Data.",
         link: 'https://ieeexplore.ieee.org/document/9005522',
       },
       {
@@ -70,17 +70,20 @@ module.exports = {
     experience: [
       {
         name: 'Goldman Sachs',
-        description: 'Software Engineer (Associate, Global Investment Research), January 2023 - Present',
+        description:
+          'Software Engineer (Associate, Global Investment Research), January 2023 - Present',
         link: '',
       },
       {
         name: 'Goldman Sachs',
-        description: 'Software Engineer (Analyst, Global Investment Research), August 2020 - December 2022',
+        description:
+          'Software Engineer (Analyst, Global Investment Research), August 2020 - December 2022',
         link: '',
       },
       {
         name: 'INTELLLEX & SGInnovate',
-        description: 'Junior Data Scientist & Summation Apprentice, May 2019 - August 2019',
+        description:
+          'Junior Data Scientist & Summation Apprentice, May 2019 - August 2019',
         link: 'https://medium.com/intelllex/inte-rn-lllex-spotlight-interview-jane-seah-e8e738b3a919',
       },
       {
@@ -95,7 +98,8 @@ module.exports = {
       },
       {
         name: 'Singapore Management University',
-        description: 'Teaching Assistant & Student Assistant, May 2017 - April 2019',
+        description:
+          'Teaching Assistant & Student Assistant, May 2017 - April 2019',
         link: '',
       },
     ],
@@ -103,12 +107,14 @@ module.exports = {
     education: [
       {
         name: 'Singapore Management University',
-        description: 'BSc in Information Systems & Analytics, summa cum laude, August 2016 - June 2020',
+        description:
+          'BSc in Information Systems & Analytics, summa cum laude, August 2016 - June 2020',
         link: '',
       },
       {
         name: 'The University of Edinburgh',
-        description: 'International Student Exchange Programme, September 2019 - December 2019',
+        description:
+          'International Student Exchange Programme, September 2019 - December 2019',
         link: '',
       },
       {
@@ -121,8 +127,7 @@ module.exports = {
     skills: [
       {
         name: 'Languages & Frameworks',
-        description:
-          'Java, Spring, Python, Django, Flask, Clojure, Ruby',
+        description: 'Java, Spring, Python, Django, Flask, Clojure, Ruby',
       },
       {
         name: 'Databases',
