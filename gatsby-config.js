@@ -17,7 +17,7 @@ module.exports = {
     // Custom: Download resume
     resume: `Jane-Seah-Resume-Jan23.pdf`,
     // Content of the About Me section
-    about: `Passionate about building impactful, scalable, quality software, with a focus on delivering value through technology. Previously applied machine learning techniques to tackle issues in cyber defence, law technology, and mental health. Currently empowering research and investment strategies at Goldman Sachs. Amateur watercolorist and surfer 😝`,
+    about: `Passionate about building impactful, scalable, quality software, with a focus on delivering value through technology. Previously applied machine learning techniques to tackle issues in cyber defence, law technology, and mental health. Currently empowering research and investment strategies at Goldman Sachs. Amateur watercolorist 🎨 and surfer 🏄‍♀️.`,
     // Optional: List your projects, they must have `name` and `description`. `link` is optional.
     projects: [
       {
@@ -131,12 +131,12 @@ module.exports = {
       },
       {
         name: 'Databases',
-        description: 'MongoDB, MySQL',
+        description: 'MongoDB, MySQL, Amazon Aurora, PostgreSQL',
       },
       {
         name: 'Other',
         description:
-          'Git, Docker, Amazon Web Services (AWS), Microservices, Apache Kafka, GraphQL',
+          'Git, Amazon Web Services (AWS), Microservices, Apache Kafka, GraphQL',
       },
     ],
   },
