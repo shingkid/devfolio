@@ -7,7 +7,7 @@ module.exports = {
     // Main Site Title
     title: `Jane Seah | Software Engineer`,
     // Description that goes under your name in main bio
-    description: `Software Engineer based in Singapore.`,
+    description: `Software Engineer based in Singapore. Open to remote work.`,
     // Optional: Twitter account handle
     author: `@shingkid`,
     // Optional: Github account URL
@@ -15,9 +15,9 @@ module.exports = {
     // Optional: LinkedIn account URL
     linkedin: `https://www.linkedin.com/in/janeseah/`,
     // Custom: Download resume
-    resume: `Jane-Seah-Resume.pdf`,
+    resume: `Jane-Seah-Resume-Jan23.pdf`,
     // Content of the About Me section
-    about: `A highly driven problem-solver passionate about building impactful, scalable, quality software, with a special interest in using data for good. I recently graduated with an Information Systems & Analytics degree as a SG:Digital Scholar and now develop with cloud and big data technologies at Goldman Sachs Engineering.`,
+    about: `Passionate about building impactful, scalable, quality software, with a focus on delivering value through technology. Previously applied machine learning techniques to tackle issues in cyber defence, law technology, and mental health. Currently empowering research and investment strategies at Goldman Sachs. Amateur watercolorist and surfer 😝`,
     // Optional: List your projects, they must have `name` and `description`. `link` is optional.
     projects: [
       {
@@ -70,7 +70,12 @@ module.exports = {
     experience: [
       {
         name: 'Goldman Sachs',
-        description: 'New Analyst (GIR Engineering), August 2020 - Present',
+        description: 'Software Engineer (Associate, Global Investment Research), January 2023 - Present',
+        link: '',
+      },
+      {
+        name: 'Goldman Sachs',
+        description: 'Software Engineer (Analyst, Global Investment Research), August 2020 - December 2022',
         link: '',
       },
       {
