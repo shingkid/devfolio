@@ -17,7 +17,7 @@ module.exports = {
     // Custom: Download resume
     resume: `Jane-Seah-Resume-Jan23.pdf`,
     // Content of the About Me section
-    about: `Passionate about building impactful, scalable, quality software, with a focus on delivering value through technology. Previously applied machine learning techniques to tackle issues in cyber defence, law technology, and mental health. Currently empowering research and investment strategies at Goldman Sachs. Amateur watercolorist 🎨 and surfer 🏄‍♀️.`,
+    about: `Software engineer passionate about building impactful, scalable, quality software, with a focus on delivering value through technology. Previously applied machine learning techniques to tackle issues in cyber defence, law technology, and mental health. Currently empowering research and investment strategies at Goldman Sachs.`,
     // Optional: List your projects, they must have `name` and `description`. `link` is optional.
     projects: [
       {
@@ -137,6 +137,24 @@ module.exports = {
         name: 'Other',
         description:
           'Git, Amazon Web Services (AWS), Microservices, Apache Kafka, GraphQL',
+      },
+    ],
+    hobbies: [
+      {
+        name: 'Music',
+        description: 'I grew up playing the piano 🎹 and developed a great love for Classical music, but I am also really fond of 80s rock music and city pop 📻.',
+      },
+      {
+        name: 'Art',
+        description: 'At the start of the COVID pandemic, I picked up amigurumi 🧶 and feverishly made eight Pokemon over approximately three months. Then, in late 2022, I tried my hand at a little bit of watercolor 🎨 (we will see how long this one lasts...)'
+      },
+      {
+        name: 'Water Sports',
+        description: 'I have always liked swimming more than running, and especially enjoy snorkelling 🤿 to see all the different flora and fauna of marine ecosystems. I gave surfing 🏄‍♀️ a try while on holiday in Bali and absolutely loved it. Maybe diving or windsurfing is next?',
+      },
+      {
+        name: 'Leisure',
+        description: 'Indie films and video games tap into my proclivity for rooting for the underdog. Favourites of late are Another Round 📽️ and Hades 🎮. While on commute I am listen to podcasts about tech and ancient history.',
       },
     ],
   },
