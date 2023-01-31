@@ -69,16 +69,16 @@ module.exports = {
     // Optional: List your experience, they must have `name` and `description`. `link` is optional.
     experience: [
       {
-        name: 'Goldman Sachs',
+        name: 'Goldman Sachs ',
         description:
           'Software Engineer (Associate, Global Investment Research), January 2023 - Present',
-        link: '',
+        link: 'https://www.goldmansachs.com/insights/series/goldman-sachs-research/',
       },
       {
         name: 'Goldman Sachs',
         description:
           'Software Engineer (Analyst, Global Investment Research), August 2020 - December 2022',
-        link: '',
+        link: 'https://www.goldmansachs.com/what-we-do/research/',
       },
       {
         name: 'INTELLLEX & SGInnovate',
