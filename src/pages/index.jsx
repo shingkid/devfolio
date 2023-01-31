@@ -22,7 +22,7 @@ const Index = ({ data }) => {
   const experience = get(data, 'site.siteMetadata.experience', false);
   const education = get(data, 'site.siteMetadata.education', false);
   const skills = get(data, 'site.siteMetadata.skills', false);
-  const hobbies = get(data, 'site.siteMetadata.hobbies', false)
+  const hobbies = get(data, 'site.siteMetadata.hobbies', false);
   const noBlog = !posts || !posts.length;
 
   return (
