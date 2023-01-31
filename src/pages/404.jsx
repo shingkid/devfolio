@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 
 const classes = {
   title: 'text-lg font-bold',
@@ -11,7 +11,7 @@ const classes = {
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO title="Not found" />
+    <Seo title="Not found" />
     <h1 className={classes.title}>404: Not Found</h1>
     <p>
       You just hit a route that doesn't exist.{' '}

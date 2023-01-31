@@ -11,7 +11,8 @@ import SectionEducation from '../components/section-education';
 import SectionProjects from '../components/section-projects';
 import SectionResearch from '../components/section-research';
 import SectionSkills from '../components/section-skills';
-import SEO from '../components/seo';
+import SectionHobbies from '../components/section-hobbies';
+import Seo from '../components/seo';
 
 const Index = ({ data }) => {
   const about = get(data, 'site.siteMetadata.about', false);
@@ -21,11 +22,12 @@ const Index = ({ data }) => {
   const experience = get(data, 'site.siteMetadata.experience', false);
   const education = get(data, 'site.siteMetadata.education', false);
   const skills = get(data, 'site.siteMetadata.skills', false);
+  const hobbies = get(data, 'site.siteMetadata.hobbies', false)
   const noBlog = !posts || !posts.length;
 
   return (
     <Layout>
-      <SEO />
+      <Seo />
       <Header metadata={data.site.siteMetadata} noBlog={noBlog} />
       {about && <SectionAbout about={about} />}
       {projects && projects.length && <SectionProjects projects={projects} />}
@@ -38,6 +40,7 @@ const Index = ({ data }) => {
         <SectionEducation education={education} />
       )}
       {skills && skills.length && <SectionSkills skills={skills} />}
+      {hobbies && hobbies.length && <SectionHobbies hobbies={hobbies} />}
     </Layout>
   );
 };
@@ -77,6 +80,10 @@ export const pageQuery = graphql`
           link
         }
         skills {
+          name
+          description
+        }
+        hobbies {
           name
           description
         }
