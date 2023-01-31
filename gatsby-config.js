@@ -143,22 +143,22 @@ module.exports = {
       {
         name: 'Music',
         description:
-          'I grew up playing the piano 🎹 and developed a great love for Classical music, but I am also really fond of 80s rock music and city pop 📻.',
+          'I grew up playing the piano 🎹 and in chamber ensembles 🎻, developing a great love for Classical music. I am also fond of 80s rock and city pop 📻.',
       },
       {
         name: 'Art',
         description:
-          'At the start of the COVID pandemic, I picked up amigurumi 🧶 and feverishly made eight Pokemon over approximately three months. Then, in late 2022, I tried my hand at a little bit of watercolor 🎨 (we will see how long this one lasts...)',
+          'I picked up amigurumi 🧶 at the start of the COVID pandemic and feverishly made 8 Pokemon over approximately 3 months. More recently, I tried my hand at watercolor 🎨 (been lacking inspiration, though)',
       },
       {
         name: 'Water Sports',
         description:
-          'I have always liked swimming more than running, and especially enjoy snorkelling 🤿 to see all the different flora and fauna of marine ecosystems. I gave surfing 🏄‍♀️ a try while on holiday in Bali and absolutely loved it. Maybe diving or windsurfing is next?',
+          'I really like snorkelling 🤿! I also gave surfing 🏄‍♀️ a try while in Bali and absolutely loved it. Maybe diving or even windsurfing is next?',
       },
       {
-        name: 'Leisure',
+        name: 'Entertainment',
         description:
-          'Indie films and video games tap into my proclivity for rooting for the underdog. Favourites of late are Another Round 📽️ and Hades 🎮. While on commute I am listen to podcasts about tech and ancient history.',
+          'Indie films and video games tap into my proclivity for rooting for the underdog. Favourites of late are Another Round 📽️ and Hades 🎮. While on commute I listen to podcasts on various topics from tech to ancient history.',
       },
     ],
   },
