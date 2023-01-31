@@ -7,7 +7,7 @@ module.exports = {
     // Main Site Title
     title: `Jane Seah | Software Engineer`,
     // Description that goes under your name in main bio
-    description: `Software Engineer based in Singapore. Open to remote work.`,
+    description: `Software Engineer based in Singapore; Open to remote work.`,
     // Optional: Twitter account handle
     author: `@shingkid`,
     // Optional: Github account URL
@@ -23,19 +23,19 @@ module.exports = {
       {
         name: 'Dr Watson (2020)',
         description:
-          "A prototype smart evacuation and rescue system that leverages data from WiFi, CCTVs and sound sensors to locate crowds, identify trapped or vulnerable occupants, compute optimal escape routes and provide real-time visualization of vital information for quick and effective decision-making by rescuers. 1st Prize @ the SCDF X IBM - Lifesavers' Innovation Challenge: Call For Code 2020.",
+          "A prototype smart evacuation and rescue system that leverages data from WiFi, CCTVs and sound sensors to locate crowds, identify trapped or vulnerable occupants, compute optimal escape routes and provide real-time visualization of vital information for quick and effective decision-making by rescuers. React front end and Flask back end, hosted on AWS and IBM Cloud. 1st Prize @ the SCDF X IBM - Lifesavers' Innovation Challenge: Call For Code 2020.",
         link: 'http://dr-watson-to-the-rescue.s3-website-ap-southeast-1.amazonaws.com/',
       },
       {
         name: 'Your Own Learning Adventure (2020)',
         description:
-          'High-fidelity prototype of YOLA, a platform designed to enable effective learning for students and fuss-free tracking of their child’s learning for parents.',
+          'High-fidelity prototype of YOLA, a platform designed to enable effective learning for students and fuss-free tracking of their child’s learning for parents. Created with Figma.',
         link: 'https://www.figma.com/proto/IaOkP8ZjXP3DWud8T1e5qW/Combined?node-id=162%3A2205&scaling=scale-down',
       },
       {
         name: 'Law Enforcement Vehicle Location Optimization (2019)',
         description:
-          'An algorithm for recommending effective deployment locations for police emergency response cars which achieved the lowest response failure rates for both normal and high demand evaluation cases. Awarded Best Performing Team.',
+          'An algorithm for recommending effective deployment locations for police emergency response cars which achieved the lowest response failure rates for both normal and high demand evaluation cases. Flask web app served on Heroku. Awarded Best Performing Team.',
         link: 'https://github.com/shingkid/base-location-optimization',
       },
       {
@@ -56,13 +56,13 @@ module.exports = {
       {
         name: 'Plugin to a Healthier Life: A Web Browser Plugin for Mental Health Monitoring (2019)',
         description:
-          "A web plugin that aims to push relevant mental health content, by tracking the fluctuations of the users' daily moods, searches, and work schedules. The poster paper for this project was accepted to the 2019 IEEE International Conference on Big Data.",
+          "A Chrome extension that aims to push relevant mental health content, by tracking the fluctuations of the users' daily moods, searches, and work schedules. The poster paper for this project was accepted to the 2019 IEEE International Conference on Big Data.",
         link: 'https://ieeexplore.ieee.org/document/9005522',
       },
       {
         name: 'Data Mining Approach to the Detection of Suicide in Social Media: A Case Study of Singapore (2018)',
         description:
-          'An NLP project focused on the social phenomenon of suicide. Relevant posts and comments on Reddit were scraped and analyzed to better understand different aspects of human life that relate to suicide. The poster paper for this project was accepted to the 2018 IEEE International Conference on Big Data.',
+          'An NLP project focused on the social phenomenon of suicide. Relevant posts and comments on Reddit were scraped and analyzed using Python to better understand different aspects of human life that relate to suicide. The poster paper for this project was accepted to the 2018 IEEE International Conference on Big Data.',
         link: 'https://ieeexplore.ieee.org/document/8622528',
       },
     ],
