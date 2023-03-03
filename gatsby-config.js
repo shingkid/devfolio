@@ -7,7 +7,7 @@ module.exports = {
     // Main Site Title
     title: `Jane Seah | Software Engineer`,
     // Description that goes under your name in main bio
-    description: `Software Engineer based in Singapore; Open to remote work.`,
+    description: `Software Engineer based in Singapore; Open to hybrid & remote work.`,
     // Optional: Twitter account handle
     author: `@shingkid`,
     // Optional: Github account URL
@@ -15,7 +15,7 @@ module.exports = {
     // Optional: LinkedIn account URL
     linkedin: `https://www.linkedin.com/in/janeseah/`,
     // Custom: Download resume
-    resume: `Jane-Seah-Resume-Jan23.pdf`,
+    resume: `Jane-Seah-Resume-Mar23.pdf`,
     // Content of the About Me section
     about: `Software engineer passionate about building impactful, scalable, quality software, with a focus on delivering value through technology. Previously applied machine learning techniques to tackle issues in cyber defence, law technology, and mental health. Currently empowering research and investment strategies at Goldman Sachs.`,
     // Optional: List your projects, they must have `name` and `description`. `link` is optional.
@@ -141,24 +141,14 @@ module.exports = {
     ],
     hobbies: [
       {
-        name: 'Music',
+        name: 'Water Sports 🤿',
         description:
-          'I grew up playing the piano 🎹 and in chamber ensembles 🎻, developing a great love for Classical music. I am also fond of 80s rock and city pop 📻.',
+          'Snorkelling combines two things I really enjoy - swimming and (...eating) fish. I have also tried surfing 🏄‍♀️ and would love to do it more :)',
       },
       {
-        name: 'Art',
+        name: 'Roguelike Videogames 🎮',
         description:
-          'I picked up amigurumi 🧶 at the start of the COVID pandemic and feverishly made 8 Pokemon over approximately 3 months. More recently, I tried my hand at watercolor 🎨 (been lacking inspiration, though)',
-      },
-      {
-        name: 'Water Sports',
-        description:
-          'I really like snorkelling 🤿! I also gave surfing 🏄‍♀️ a try while in Bali and absolutely loved it. Maybe diving or even windsurfing is next?',
-      },
-      {
-        name: 'Entertainment',
-        description:
-          'Indie films and video games tap into my proclivity for rooting for the underdog. Favourites of late are Another Round 📽️ and Hades 🎮. While on commute I listen to podcasts on various topics from tech to ancient history.',
+          'Obsessed with Hades 🔱 and Dead Cells. Could it be the old adage "Fail fast, learn faster"? With the boons of Hermes you can certainly get quite agile... *cringe*',
       },
     ],
   },
