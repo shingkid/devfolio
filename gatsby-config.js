@@ -17,7 +17,7 @@ module.exports = {
     // Custom: Download resume
     resume: `Jane-Seah-Resume-protected.pdf`,
     // Content of the About Me section
-    about: `Software engineer passionate about building impactful, scalable, quality software, with a focus on delivering value through technology. Previously applied machine learning techniques to tackle issues in cyber defence, law technology, and mental health. Currently empowering research and investment strategies at Goldman Sachs.`,
+    about: `Software engineer passionate about building impactful, scalable, quality software, with a focus on delivering value through technology. Experienced with applying AI and ML techniques to tackle issues in cyber defence, law technology, mental health support, and most recently, investment research.`,
     // Optional: List your projects, they must have `name` and `description`. `link` is optional.
     projects: [
       {
