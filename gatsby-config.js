@@ -133,7 +133,7 @@ module.exports = {
     skills: [
       {
         name: 'Languages & Frameworks',
-        description: 'Java, Spring, Python, Django, Flask, Clojure, Ruby',
+        description: 'Java, Spring, Python,, PyTorch, Django, Flask, Clojure, Ruby',
       },
       {
         name: 'Databases',
@@ -149,7 +149,7 @@ module.exports = {
       {
         name: 'Water Sports',
         description:
-          'Snorkelling 🤿, surfing 🏄‍♀️, diving, and ...eating fish?',
+          'Snorkelling/diving 🤿, surfing 🏄‍♀️, and ...eating fish 😋',
       },
       {
         name: 'Roguelike Videogames',
