@@ -17,7 +17,7 @@ module.exports = {
     // Custom: Download resume
     resume: `Jane-Seah-Resume-protected.pdf`,
     // Content of the About Me section
-    about: `Software engineer passionate about building impactful, scalable, quality software, with a focus on delivering value through technology. Experienced with applying AI and ML techniques to tackle issues in cyber defence, law technology, mental health support, and most recently, investment research.`,
+    about: `Software engineer passionate about building impactful, scalable, quality software, with a focus on delivering value through technology. Experienced in developing ML techniques and AI-driven products to solve complex problems in cyber defence, legal services, mental health support, and most recently, investment research.`,
     // Optional: List your projects, they must have `name` and `description`. `link` is optional.
     projects: [
       {
@@ -147,14 +147,14 @@ module.exports = {
     ],
     hobbies: [
       {
-        name: 'Water Sports 🤿',
+        name: 'Water Sports',
         description:
-          'Snorkelling combines two things I really enjoy - swimming and (...eating) fish. I have also tried surfing 🏄‍♀️ and would love to do it more :)',
+          'Snorkelling 🤿, surfing 🏄‍♀️, diving, and ...eating fish?',
       },
       {
-        name: 'Roguelike Videogames 🎮',
+        name: 'Roguelike Videogames',
         description:
-          'Obsessed with Hades 🔱 and Dead Cells. Could it be the old adage "Fail fast, learn faster"? With the boons of Hermes you can certainly get quite agile... *cringe*',
+          'Obsessed with Hades 🔱 and Dead Cells 🎮',
       },
     ],
   },
