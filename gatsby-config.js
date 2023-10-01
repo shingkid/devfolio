@@ -71,7 +71,13 @@ module.exports = {
       {
         name: 'Goldman Sachs ',
         description:
-          'Software Engineer (Associate, Global Investment Research), January 2023 - Present',
+          'Machine Learning Engineer (Associate, Global Investment Research), October 2023 - Present',
+        link: 'https://www.goldmansachs.com/insights/series/goldman-sachs-research/',
+      },
+      {
+        name: 'Goldman Sachs ',
+        description:
+          'Software Engineer (Associate, Global Investment Research), January 2023 - September 2023',
         link: 'https://www.goldmansachs.com/insights/series/goldman-sachs-research/',
       },
       {
