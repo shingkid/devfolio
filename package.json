@@ -23,7 +23,7 @@
     "gatsby-transformer-sharp": "^4.24.0",
     "lodash": "^4.17.20",
     "moment": "^2.29.1",
-    "postcss": "^8.1.1",
+    "postcss": "^8.4.31",
     "prismjs": "^1.22.0",
     "prop-types": "^15.7.2",
     "react": "^16.14.0",
