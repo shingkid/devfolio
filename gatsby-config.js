@@ -15,7 +15,7 @@ module.exports = {
     // Optional: LinkedIn account URL
     linkedin: `https://www.linkedin.com/in/janeseah/`,
     // Custom: Download resume
-    resume: `Jane-Seah-AIEngineer-Resume-protected.pdf`,
+    resume: `Jane-Seah-AIEngineer-Resume_protected.pdf`,
     // Content of the About Me section
     about: `Software engineer passionate about building impactful, scalable, quality software, with a focus on delivering value through technology. Experienced in developing ML techniques and AI-driven products to solve complex problems in cyber defence, legal services, mental health support, and most recently, investment research.`,
     // Optional: List your projects, they must have `name` and `description`. `link` is optional.
