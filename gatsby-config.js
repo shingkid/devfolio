@@ -85,8 +85,8 @@ mentoring engineers.`,
       },
       {
         name: 'Nodal (tech consulting)',
-        description:
-          'Tech Lead, March 2024 - November 2024'
+        description: 'Tech Lead, March 2024 - November 2024',
+        link: '',
       },
       {
         name: 'Goldman Sachs',
@@ -102,8 +102,7 @@ mentoring engineers.`,
       },
       {
         name: 'INTELLLEX (legal technology startup)',
-        description:
-          'Applied AI Intern (NLP), May 2019 - August 2019',
+        description: 'Applied AI Intern (NLP), May 2019 - August 2019',
         link: 'https://medium.com/intelllex/inte-rn-lllex-spotlight-interview-jane-seah-e8e738b3a919',
       },
       {
@@ -113,7 +112,8 @@ mentoring engineers.`,
       },
       {
         name: 'DSO National Laboratories',
-        description: 'Machine Learning Intern (Deep Learning), May 2018 - August 2018',
+        description:
+          'Machine Learning Intern (Deep Learning), May 2018 - August 2018',
         link: '',
       },
       {
