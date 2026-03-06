@@ -17,7 +17,10 @@ module.exports = {
     // Custom: Download resume
     resume: `Jane-Seah-AIEngineer-Resume_protected.pdf`,
     // Content of the About Me section
-    about: `Software engineer passionate about building impactful, scalable, quality software, with a focus on delivering value through technology. Experienced in developing ML techniques and AI-driven products to solve complex problems in cyber defence, legal services, mental health support, and most recently, investment research.`,
+    about: `Applied AI Engineer with 5+ years of software engineering experience, including 2+ years building production-grade
+LLM systems with end-to-end ownership across retrieval, evaluation, and deployment. Focused on reliability and
+model performance in real-world environments, with experience integrating AI into distributed systems and
+mentoring engineers.`,
     // Optional: List your projects, they must have `name` and `description`. `link` is optional.
     projects: [
       {
@@ -75,13 +78,18 @@ module.exports = {
     // Optional: List your experience, they must have `name` and `description`. `link` is optional.
     experience: [
       {
-        name: 'Goldman Sachs ',
+        name: 'Goldman Sachs',
         description:
           'AI Engineer (Associate, Global Investment Research), October 2023 - Present',
         link: 'https://www.goldmansachs.com/insights/series/goldman-sachs-research/',
       },
       {
-        name: 'Goldman Sachs ',
+        name: 'Nodal (tech consulting)',
+        description:
+          'Tech Lead, March 2024 - November 2024'
+      },
+      {
+        name: 'Goldman Sachs',
         description:
           'Software Engineer (Associate, Global Investment Research), January 2023 - September 2023',
         link: 'https://www.goldmansachs.com/insights/series/goldman-sachs-research/',
@@ -93,19 +101,19 @@ module.exports = {
         link: 'https://www.goldmansachs.com/what-we-do/research/',
       },
       {
-        name: 'INTELLLEX & SGInnovate',
+        name: 'INTELLLEX (legal technology startup)',
         description:
-          'Junior Data Scientist & Summation Apprentice, May 2019 - August 2019',
+          'Applied AI Intern (NLP), May 2019 - August 2019',
         link: 'https://medium.com/intelllex/inte-rn-lllex-spotlight-interview-jane-seah-e8e738b3a919',
       },
       {
         name: 'Skilio',
-        description: 'Pioneer, February 2019 - August 2019',
+        description: 'NLP Research Lead, February 2019 - August 2019',
         link: 'https://skilio.co/',
       },
       {
         name: 'DSO National Laboratories',
-        description: 'Cyber Analytics Research Intern, May 2018 - August 2018',
+        description: 'Machine Learning Intern (Deep Learning), May 2018 - August 2018',
         link: '',
       },
       {
