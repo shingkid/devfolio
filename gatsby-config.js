@@ -5,9 +5,9 @@ module.exports = {
     // Your Name
     name: 'Jane Seah',
     // Main Site Title
-    title: `Jane Seah | Software Engineer`,
+    title: `Jane Seah | AI Engineer`,
     // Description that goes under your name in main bio
-    description: `Software Engineer based in Singapore; Open to hybrid & remote work.`,
+    description: `AI Engineer based in Singapore; Open to hybrid & remote work.`,
     // Optional: Twitter account handle
     author: `@shingkid`,
     // Optional: Github account URL
@@ -20,6 +20,12 @@ module.exports = {
     about: `Software engineer passionate about building impactful, scalable, quality software, with a focus on delivering value through technology. Experienced in developing ML techniques and AI-driven products to solve complex problems in cyber defence, legal services, mental health support, and most recently, investment research.`,
     // Optional: List your projects, they must have `name` and `description`. `link` is optional.
     projects: [
+      {
+        name: 'Pawkit (2024)',
+        description:
+          'A mobile app that helps pet owners keep track of their pets’ health and wellness by providing a comprehensive platform for managing their pets’ medical records, appointments, and medication schedules. Available on both iOS and Android devices.',
+        link: 'https://play.google.com/store/apps/details?id=com.pawkit.app',
+      },
       {
         name: 'Dr Watson (2020)',
         description:
@@ -71,7 +77,7 @@ module.exports = {
       {
         name: 'Goldman Sachs ',
         description:
-          'Machine Learning Engineer (Associate, Global Investment Research), October 2023 - Present',
+          'AI Engineer (Associate, Global Investment Research), October 2023 - Present',
         link: 'https://www.goldmansachs.com/insights/series/goldman-sachs-research/',
       },
       {
@@ -133,28 +139,22 @@ module.exports = {
     skills: [
       {
         name: 'Languages & Frameworks',
-        description: 'Java, Spring, Python, PyTorch, Clojure',
+        description: 'Java (Spring Boot), Python (FastAPI, Google ADK)',
       },
       {
         name: 'Databases',
-        description: 'MongoDB, MySQL, Amazon Aurora, PostgreSQL',
-      },
-      {
-        name: 'Other',
-        description:
-          'Git, Amazon Web Services (AWS), Microservices, Apache Kafka, GraphQL',
+        description: 'OpenSearch, MongoDB, MySQL, Amazon Aurora, PostgreSQL',
       },
     ],
     hobbies: [
       {
         name: 'Water Sports',
-        description:
-          'Snorkelling/diving 🤿, surfing 🏄‍♀️, and devouring seafood 😋',
+        description: 'Snorkeling/diving, surfing, and devouring seafood',
       },
       {
-        name: 'Roguelike Videogames',
+        name: 'Rogue-like video games',
         description:
-          'Obsessed with Hades 🔱 and Dead Cells 🎮',
+          'Obsessed with Hades, Dead Cells, and most recently, Shape of Dreams',
       },
     ],
   },
