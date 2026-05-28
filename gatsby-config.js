@@ -80,13 +80,8 @@ mentoring engineers.`,
       {
         name: 'Goldman Sachs',
         description:
-          'AI Engineer (Associate, Global Investment Research), October 2023 - Present',
+          'AI Engineer (Associate, Global Investment Research), October 2023 - June 2026',
         link: 'https://www.goldmansachs.com/insights/series/goldman-sachs-research/',
-      },
-      {
-        name: 'Nodal (tech consulting)',
-        description: 'Tech Lead, March 2024 - November 2024',
-        link: '',
       },
       {
         name: 'Goldman Sachs',
