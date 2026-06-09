@@ -7,7 +7,7 @@ module.exports = {
     // Main Site Title
     title: `Jane Seah | AI Engineer`,
     // Description that goes under your name in main bio
-    description: `AI Engineer based in Singapore; Open to hybrid & remote work.`,
+    description: `AI Engineer based in Singapore`,
     // Optional: Twitter account handle
     author: `@shingkid`,
     // Optional: Github account URL
@@ -80,19 +80,13 @@ mentoring engineers.`,
       {
         name: 'Goldman Sachs',
         description:
-          'AI Engineer (Associate, Global Investment Research), October 2023 - June 2026',
-        link: 'https://www.goldmansachs.com/insights/series/goldman-sachs-research/',
+          'Senior Software Engineer (Applied AI), October 2023 - June 2026',
+        link: 'https://www.goldmansachs.com/what-we-do/research/',
       },
       {
         name: 'Goldman Sachs',
         description:
-          'Software Engineer (Associate, Global Investment Research), January 2023 - September 2023',
-        link: 'https://www.goldmansachs.com/insights/series/goldman-sachs-research/',
-      },
-      {
-        name: 'Goldman Sachs',
-        description:
-          'Software Engineer (Analyst, Global Investment Research), August 2020 - December 2022',
+          'Software Engineer (Distributed Systems), August 2020 - September 2023',
         link: 'https://www.goldmansachs.com/what-we-do/research/',
       },
       {
@@ -155,7 +149,7 @@ mentoring engineers.`,
         description: 'Snorkeling/diving, surfing, and devouring seafood',
       },
       {
-        name: 'Rogue-like video games',
+        name: 'Rogue-lite video games',
         description:
           'Obsessed with Hades, Dead Cells, and most recently, Shape of Dreams',
       },
