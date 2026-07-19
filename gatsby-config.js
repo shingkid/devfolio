@@ -210,11 +210,11 @@ mentoring engineers.`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `devfolio`,
-        short_name: `devfolio`,
+        name: `Jane Seah`,
+        short_name: `janeseah`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`, // This color appears on mobile
+        background_color: `#ffffff`,
+        theme_color: `#2d4a9e`, // cobalt — matches the terminal prompt
         display: `minimal-ui`,
         icon: `src/images/icon.png`,
       },

@@ -1,27 +1,27 @@
 import { Link } from 'gatsby';
 import React from 'react';
 
-import Section from '../section';
-import SummaryItem from '../summary-item';
+import CommandBlock from '../terminal';
 
 const SectionBlog = ({ posts }) => {
   return (
-    <Section title="Latest Posts">
+    <CommandBlock command="ls -t blog/" label="Latest posts">
       {posts.map((post) => (
-        <SummaryItem
-          key={post.node.fields.slug}
-          name={post.node.frontmatter.title}
-          description={post.node.frontmatter.description}
-          link={post.node.fields.slug}
-          internal
-        />
+        <div className="entry" key={post.node.fields.slug}>
+          <h3 className="entry-name">
+            <Link to={post.node.fields.slug}>
+              {post.node.frontmatter.title}
+            </Link>
+          </h3>
+          <p className="entry-desc">{post.node.frontmatter.description}</p>
+        </div>
       ))}
       {posts.length >= 5 && (
-        <Link className="text-gray-500 text-sm hover:text-black" to="/blog">
-          View all posts &rarr;
-        </Link>
+        <p className="entry">
+          <Link to="/blog">view all posts</Link>
+        </p>
       )}
-    </Section>
+    </CommandBlock>
   );
 };
 

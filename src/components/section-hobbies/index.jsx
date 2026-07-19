@@ -1,19 +1,19 @@
 import React from 'react';
 
-import Section from '../section';
-import SummaryItem from '../summary-item';
+import CommandBlock from '../terminal';
 
 const SectionHobbies = ({ hobbies }) => {
+  if (!hobbies.length) return null;
+
   return (
-    <Section title="Hobbies">
+    <CommandBlock command="cat hobbies.txt" label="Hobbies">
       {hobbies.map((hobby) => (
-        <SummaryItem
-          key={hobby.name}
-          name={hobby.name}
-          description={hobby.description}
-        />
+        <div className="entry" key={hobby.name}>
+          <h3 className="entry-name">{hobby.name}</h3>
+          <p className="entry-desc">{hobby.description}</p>
+        </div>
       ))}
-    </Section>
+    </CommandBlock>
   );
 };
 

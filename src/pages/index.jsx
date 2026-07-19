@@ -3,6 +3,7 @@ import get from 'lodash/get';
 import React from 'react';
 
 import Header from '../components/header';
+import InteractivePrompt from '../components/interactive-prompt';
 import Layout from '../components/layout';
 import SectionAbout from '../components/section-about';
 import SectionBlog from '../components/section-blog';
@@ -30,17 +31,18 @@ const Index = ({ data }) => {
       <Seo />
       <Header metadata={data.site.siteMetadata} noBlog={noBlog} />
       {about && <SectionAbout about={about} />}
-      {projects && projects.length && <SectionProjects projects={projects} />}
-      {research && research.length && <SectionResearch research={research} />}
-      {!noBlog && <SectionBlog posts={posts} />}
       {experience && experience.length && (
         <SectionExperience experience={experience} />
       )}
+      {projects && projects.length && <SectionProjects projects={projects} />}
+      {research && research.length && <SectionResearch research={research} />}
+      {!noBlog && <SectionBlog posts={posts} />}
       {education && education.length && (
         <SectionEducation education={education} />
       )}
       {skills && skills.length && <SectionSkills skills={skills} />}
       {hobbies && hobbies.length && <SectionHobbies hobbies={hobbies} />}
+      <InteractivePrompt metadata={data.site.siteMetadata} />
     </Layout>
   );
 };

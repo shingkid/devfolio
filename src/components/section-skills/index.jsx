@@ -1,19 +1,28 @@
 import React from 'react';
 
-import Section from '../section';
-import SummaryItem from '../summary-item';
+import CommandBlock from '../terminal';
+
+const toEnvKey = (name) =>
+  name
+    .toUpperCase()
+    .replace(/\s*&\s*/g, '_')
+    .replace(/[^A-Z0-9]+/g, '_')
+    .replace(/^_|_$/g, '');
 
 const SectionSkills = ({ skills }) => {
+  if (!skills.length) return null;
+
   return (
-    <Section title="Skills">
+    <CommandBlock command="env" label="Skills">
       {skills.map((skill) => (
-        <SummaryItem
-          key={skill.name}
-          name={skill.name}
-          description={skill.description}
-        />
+        <p className="env-item" key={skill.name}>
+          <span className="env-key">{toEnvKey(skill.name)}</span>
+          <span className="env-eq">=&quot;</span>
+          {skill.description}
+          <span className="env-eq">&quot;</span>
+        </p>
       ))}
-    </Section>
+    </CommandBlock>
   );
 };
 

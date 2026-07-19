@@ -1,14 +1,12 @@
 import React from 'react';
 
-import Section from '../section';
+import CommandBlock from '../terminal';
 
 const SectionAbout = ({ about }) => {
   return (
-    <Section title="About Me">
-      <div className="mb-6">
-        <p>{about}</p>
-      </div>
-    </Section>
+    <CommandBlock command="cat about.txt" label="About me">
+      <p>{about}</p>
+    </CommandBlock>
   );
 };
 

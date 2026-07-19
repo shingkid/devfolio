@@ -1,22 +1,21 @@
 import React from 'react';
 
-import Section from '../section';
-import SummaryItem from '../summary-item';
+import CommandBlock from '../terminal';
 
 const SectionResearch = ({ research }) => {
   if (!research.length) return null;
 
   return (
-    <Section title="Research">
+    <CommandBlock command="cat research.md" label="Research">
       {research.map((item) => (
-        <SummaryItem
-          key={item.name}
-          name={item.name}
-          description={item.description}
-          link={item.link}
-        />
+        <div className="entry" key={item.name}>
+          <h3 className="entry-name">
+            {item.link ? <a href={item.link}>{item.name}</a> : item.name}
+          </h3>
+          <p className="entry-desc">{item.description}</p>
+        </div>
       ))}
-    </Section>
+    </CommandBlock>
   );
 };
 

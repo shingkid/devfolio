@@ -1,22 +1,32 @@
 import React from 'react';
 
-import Section from '../section';
-import SummaryItem from '../summary-item';
+import CommandBlock from '../terminal';
 
 const SectionProjects = ({ projects }) => {
   if (!projects.length) return null;
 
   return (
-    <Section title="Projects">
-      {projects.map((project) => (
-        <SummaryItem
-          key={project.name}
-          name={project.name}
-          description={project.description}
-          link={project.link}
-        />
-      ))}
-    </Section>
+    <CommandBlock command="tree projects/" label="Projects">
+      <ul>
+        {projects.map((project, i) => (
+          <li className="tree-item" key={project.name}>
+            <span className="tree-glyph" aria-hidden="true">
+              {i === projects.length - 1 ? '└──' : '├──'}
+            </span>
+            <div>
+              <h3 className="tree-name">
+                {project.link ? (
+                  <a href={project.link}>{project.name}</a>
+                ) : (
+                  project.name
+                )}
+              </h3>
+              <p className="tree-desc">{project.description}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </CommandBlock>
   );
 };
 

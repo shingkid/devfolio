@@ -2,24 +2,22 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import Layout from '../components/layout';
+import CommandBlock from '../components/terminal';
 import Seo from '../components/seo';
 
-const classes = {
-  title: 'text-lg font-bold',
-  link: 'underline',
-};
-
-const NotFoundPage = () => (
+const NotFoundPage = ({ location }) => (
   <Layout>
     <Seo title="Not found" />
-    <h1 className={classes.title}>404: Not Found</h1>
-    <p>
-      You just hit a route that doesn't exist.{' '}
-      <Link className={classes.link} to="/">
-        Return to safety
-      </Link>
-      .
-    </p>
+    <CommandBlock
+      command={`cat ${location?.pathname?.slice(1) || 'this-page'}`}
+      label="Page not found"
+      first
+    >
+      <p>cat: No such file or directory (404)</p>
+      <p className="entry">
+        <Link to="/">cd ~ — return home</Link>
+      </p>
+    </CommandBlock>
   </Layout>
 );
 

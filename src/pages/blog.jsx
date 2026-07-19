@@ -7,9 +7,8 @@ import Layout from '../components/layout';
 import Seo from '../components/seo';
 import NotFound from '../pages/404';
 
-const Index = ({ data }) => {
+const Blog = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
-  const noBlog = !posts || !posts.length;
 
   if (!posts || !posts.length) {
     return <NotFound />;
@@ -18,13 +17,13 @@ const Index = ({ data }) => {
   return (
     <Layout>
       <Seo title="Blog" />
-      <Header metadata={data.site.siteMetadata} />
-      {!noBlog && <BlogPosts posts={posts} />}
+      <Header metadata={data.site.siteMetadata} noBlog={false} />
+      <BlogPosts posts={posts} />
     </Layout>
   );
 };
 
-export default Index;
+export default Blog;
 
 export const pageQuery = graphql`
   query {
@@ -40,7 +39,7 @@ export const pageQuery = graphql`
         resume
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       edges {
         node {
           excerpt
