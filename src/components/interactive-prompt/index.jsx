@@ -7,9 +7,14 @@ const FILES =
   'about.txt  education.log  hobbies.txt  links/  projects/  research.md  resume.pdf';
 
 const setTheme = (mode) => {
-  document.documentElement.setAttribute('data-theme', mode);
+  if (mode === 'auto') {
+    document.documentElement.removeAttribute('data-theme');
+  } else {
+    document.documentElement.setAttribute('data-theme', mode);
+  }
   try {
-    localStorage.setItem('theme', mode);
+    if (mode === 'auto') localStorage.removeItem('theme');
+    else localStorage.setItem('theme', mode);
   } catch (e) {
     // private mode: theme just won't persist
   }
@@ -35,7 +40,7 @@ const InteractivePrompt = ({ metadata = {} }) => {
           '  whoami          who is jane?',
           '  ls              list files',
           '  open <file>     open resume.pdf, github, or linkedin',
-          '  theme <mode>    switch between light and dark',
+          '  theme <mode>    light, dark, or auto (follow the system)',
           '  tea             put the kettle on',
           '  clear           clear this session',
         ].join('\n');
@@ -69,7 +74,11 @@ const InteractivePrompt = ({ metadata = {} }) => {
           setTheme(arg);
           return `theme set to ${arg}`;
         }
-        return 'usage: theme dark | theme light';
+        if (arg === 'auto' || arg === 'system') {
+          setTheme('auto');
+          return 'theme follows your system now';
+        }
+        return 'usage: theme dark | light | auto';
       case 'sudo':
         return 'jane is not in the sudoers file. This incident will be reported.';
       case 'tea':

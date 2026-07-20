@@ -1,7 +1,9 @@
 /* ---------------------------------------------------------------------------
-   Jane Seah — paper terminal
-   A calm terminal transcript printed on white paper: cobalt ink for the
-   prompt, one amber cursor. Sometype Mono carries everything.
+   Jane Seah — terminal window
+   The whole transcript lives inside one terminal panel with a pixel cat on
+   its corner. Cream ground with a purple accent in light; near-black with a
+   lilac accent in dark. Follows the system theme unless `theme` overrides it.
+   Sometype Mono carries everything.
 --------------------------------------------------------------------------- */
 
 @font-face {
@@ -12,8 +14,8 @@
   src: url('/fonts/sometype-mono-latin.woff2') format('woff2');
   unicode-range:
     U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
-    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
-    U+2212, U+2215, U+FEFF, U+FFFD;
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
@@ -24,8 +26,8 @@
   src: url('/fonts/sometype-mono-latin-ext.woff2') format('woff2');
   unicode-range:
     U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
-    U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
-    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
 @font-face {
@@ -36,30 +38,82 @@
   src: url('/fonts/sometype-mono-italic-latin.woff2') format('woff2');
   unicode-range:
     U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
-    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
-    U+2212, U+2215, U+FEFF, U+FFFD;
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
 }
 
+/* Light is the :root default; dark overrides via media query. Both are also
+   exposed via [data-theme] so the `theme` command can force either one. */
 :root {
-  --bg: oklch(100% 0 0);
-  --surface: oklch(96.5% 0.004 258);
-  --ink: oklch(24% 0.015 258);
-  --muted: oklch(45% 0.02 258);
-  --primary: oklch(44% 0.14 258);
-  --accent: oklch(72% 0.15 70);
-  --rule: oklch(88% 0.008 258);
+  --bg: oklch(98.5% 0.012 85);
+  --panel: oklch(96.5% 0.014 85);
+  --panel-2: oklch(94.5% 0.016 85);
+  --border: oklch(88% 0.02 85);
+  --ink: oklch(24% 0.032 305);
+  --muted: oklch(43% 0.06 310);
+  --dim: oklch(55% 0.05 310);
+  --accent: oklch(49% 0.165 315);
+  --accent-dim: oklch(88% 0.04 315);
+  --danger: oklch(44% 0.19 25);
+  --shadow: oklch(45% 0.03 85 / 0.12);
+  --green: oklch(42% 0.13 150);
+  --amber: oklch(46% 0.14 75);
+  --blue: oklch(42% 0.12 235);
   --font-mono:
     'Sometype Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: oklch(13% 0.006 290);
+    --panel: oklch(17% 0.008 290);
+    --panel-2: oklch(20.5% 0.01 290);
+    --border: oklch(29% 0.014 290);
+    --ink: oklch(94% 0.008 290);
+    --muted: oklch(65% 0.025 290);
+    --dim: oklch(47% 0.018 290);
+    --accent: oklch(78% 0.105 300);
+    --accent-dim: oklch(34% 0.085 300);
+    --danger: oklch(72% 0.17 25);
+    --shadow: oklch(0% 0 0 / 0.65);
+    --green: oklch(78% 0.15 150);
+    --amber: oklch(80% 0.15 80);
+    --blue: oklch(76% 0.12 235);
+  }
+}
+
+:root[data-theme='light'] {
+  --bg: oklch(98.5% 0.012 85);
+  --panel: oklch(96.5% 0.014 85);
+  --panel-2: oklch(94.5% 0.016 85);
+  --border: oklch(88% 0.02 85);
+  --ink: oklch(24% 0.032 305);
+  --muted: oklch(43% 0.06 310);
+  --dim: oklch(55% 0.05 310);
+  --accent: oklch(49% 0.165 315);
+  --accent-dim: oklch(88% 0.04 315);
+  --danger: oklch(44% 0.19 25);
+  --shadow: oklch(45% 0.03 85 / 0.12);
+  --green: oklch(42% 0.13 150);
+  --amber: oklch(46% 0.14 75);
+  --blue: oklch(42% 0.12 235);
+}
+
 :root[data-theme='dark'] {
-  --bg: oklch(14% 0.018 258);
-  --surface: oklch(19% 0.02 258);
-  --ink: oklch(92% 0.01 258);
-  --muted: oklch(70% 0.02 258);
-  --primary: oklch(76% 0.1 258);
-  --accent: oklch(78% 0.14 75);
-  --rule: oklch(30% 0.02 258);
+  --bg: oklch(13% 0.006 290);
+  --panel: oklch(17% 0.008 290);
+  --panel-2: oklch(20.5% 0.01 290);
+  --border: oklch(29% 0.014 290);
+  --ink: oklch(94% 0.008 290);
+  --muted: oklch(65% 0.025 290);
+  --dim: oklch(47% 0.018 290);
+  --accent: oklch(78% 0.105 300);
+  --accent-dim: oklch(34% 0.085 300);
+  --danger: oklch(72% 0.17 25);
+  --shadow: oklch(0% 0 0 / 0.65);
+  --green: oklch(78% 0.15 150);
+  --amber: oklch(80% 0.15 80);
+  --blue: oklch(76% 0.12 235);
 }
 
 * {
@@ -78,11 +132,14 @@ body {
   font-size: 1rem;
   line-height: 1.75;
   font-variant-ligatures: none;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
 ::selection {
-  background: var(--accent);
-  color: oklch(20% 0.02 70);
+  background: var(--accent-dim);
+  color: var(--ink);
 }
 
 h1,
@@ -106,17 +163,16 @@ ol {
 }
 
 a {
-  color: var(--primary);
+  color: var(--accent);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.25em;
-  text-decoration-color: color-mix(in oklch, var(--primary) 45%, transparent);
+  text-decoration-color: var(--accent-dim);
   transition: text-decoration-color 0.15s ease-out;
 }
 
 a:hover {
   text-decoration-color: var(--accent);
-  text-decoration-thickness: 2px;
 }
 
 a:focus-visible,
@@ -130,25 +186,104 @@ input:focus-visible {
 /* ------------------------------------------------------------------ shell */
 
 .term {
-  max-width: 76ch;
+  max-width: 940px;
   margin: 0 auto;
-  padding: clamp(1.25rem, 4vw, 3.5rem) clamp(1rem, 4vw, 2rem)
+  /* top padding leaves headroom for the cat perched above the terminal */
+  padding: clamp(5.5rem, 10vw, 7rem) clamp(0.75rem, 4vw, 2rem)
     clamp(4rem, 10vh, 7rem);
 }
 
-.term-motd {
+.terminal-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.terminal {
+  width: 100%;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px -30px var(--shadow);
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.cat-canvas {
+  position: absolute;
+  top: -76px;
+  right: 4px;
+  width: 310px;
+  max-width: 74%;
+  height: 86px;
+  z-index: 2;
+  cursor: pointer;
+  image-rendering: pixelated;
+}
+
+.terminal-chrome {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 1rem;
+  background: var(--panel-2);
+  border-bottom: 1px solid var(--border);
+  font-size: 0.75rem;
+  color: var(--dim);
+}
+
+.terminal-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green);
+  flex: none;
+  animation: pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.terminal-path {
   color: var(--muted);
+}
+
+.terminal-status {
+  margin-left: auto;
+  color: var(--dim);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.terminal-body {
+  padding: clamp(1.25rem, 4vw, 2.5rem) clamp(1rem, 4vw, 2.5rem)
+    clamp(2rem, 5vw, 3rem);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+}
+
+.term-motd {
+  color: var(--dim);
   font-size: 0.8125rem;
 }
 
 /* ------------------------------------------------------------ command block */
 
 .cmd {
-  margin-top: clamp(2.75rem, 6vh, 4.25rem);
+  margin-top: clamp(2.5rem, 5vh, 3.75rem);
 }
 
 .cmd--first {
-  margin-top: clamp(1.5rem, 4vh, 2.5rem);
+  margin-top: clamp(1.25rem, 3vh, 2rem);
 }
 
 .cmd-line {
@@ -157,7 +292,7 @@ input:focus-visible {
 }
 
 .cmd-prompt {
-  color: var(--primary);
+  color: var(--accent);
   font-weight: 400;
   user-select: none;
 }
@@ -165,6 +300,7 @@ input:focus-visible {
 .cmd-output {
   margin-top: 0.875rem;
   max-width: 68ch;
+  color: var(--muted);
   text-wrap: pretty;
 }
 
@@ -186,6 +322,7 @@ input:focus-visible {
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.02em;
+  color: var(--ink);
 }
 
 .hero-name a {
@@ -218,12 +355,13 @@ input:focus-visible {
   display: block;
   width: 100%;
   height: auto;
-  border: 1px solid var(--rule);
+  border: 1px solid var(--border);
+  border-radius: 4px;
 }
 
 .hero-portrait figcaption {
   margin-top: 0.375rem;
-  color: var(--muted);
+  color: var(--dim);
   font-size: 0.75rem;
 }
 
@@ -242,12 +380,12 @@ input:focus-visible {
 }
 
 .links-arrow {
-  color: var(--muted);
+  color: var(--dim);
   user-select: none;
 }
 
 .links-target {
-  color: var(--muted);
+  color: var(--dim);
   overflow-wrap: anywhere;
 }
 
@@ -265,18 +403,19 @@ input:focus-visible {
 }
 
 .tree-glyph {
-  color: var(--muted);
+  color: var(--dim);
   user-select: none;
   line-height: 1.75;
 }
 
 .tree-name {
   font-weight: 700;
+  color: var(--ink);
 }
 
 .tree-desc {
   color: var(--muted);
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   line-height: 1.7;
   margin-top: 0.125rem;
 }
@@ -295,7 +434,7 @@ input:focus-visible {
 }
 
 .history-num {
-  color: var(--muted);
+  color: var(--dim);
   text-align: right;
   user-select: none;
 }
@@ -312,12 +451,12 @@ input:focus-visible {
 }
 
 .env-key {
-  color: var(--primary);
+  color: var(--accent);
   font-weight: 700;
 }
 
 .env-eq {
-  color: var(--muted);
+  color: var(--dim);
 }
 
 /* ----------------------------------------------------------- shared blocks */
@@ -332,11 +471,12 @@ input:focus-visible {
 
 .entry-name {
   font-weight: 700;
+  color: var(--ink);
 }
 
 .entry-desc {
   color: var(--muted);
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   line-height: 1.7;
   margin-top: 0.125rem;
 }
@@ -344,13 +484,13 @@ input:focus-visible {
 /* ------------------------------------------------------- interactive prompt */
 
 .iterm {
-  margin-top: clamp(3rem, 7vh, 5rem);
-  border-top: 1px solid var(--rule);
+  margin-top: clamp(2.75rem, 6vh, 4.5rem);
+  border-top: 1px solid var(--border);
   padding-top: 1.5rem;
 }
 
 .iterm-hint {
-  color: var(--muted);
+  color: var(--dim);
   font-size: 0.8125rem;
   margin-bottom: 0.75rem;
 }
@@ -454,24 +594,24 @@ input:focus-visible {
 }
 
 .blog-content a {
-  color: var(--primary);
+  color: var(--accent);
 }
 
 .blog-content blockquote {
   margin: 0 0 1.5rem;
   padding-left: 1.25rem;
-  border-left: 1px solid var(--rule);
+  border-left: 2px solid var(--accent-dim);
   color: var(--muted);
 }
 
 .blog-content hr {
   border: 0;
-  border-top: 1px solid var(--rule);
+  border-top: 1px solid var(--border);
   margin: 2rem 0;
 }
 
 .blog-meta {
-  color: var(--muted);
+  color: var(--dim);
   font-size: 0.8125rem;
 }
 
@@ -502,13 +642,14 @@ pre[class*='language-'] {
   padding: 1rem 1.25rem;
   margin: 0 0 1.5rem;
   overflow: auto;
-  background: var(--surface);
-  border: 1px solid var(--rule);
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
 }
 
 :not(pre) > code,
 .language-text {
-  background: var(--surface);
+  background: var(--panel-2);
   padding: 0.1em 0.35em;
   font-size: 0.875em;
 }
@@ -517,7 +658,7 @@ pre[class*='language-'] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: var(--muted);
+  color: var(--dim);
 }
 
 .token.property,
@@ -525,7 +666,7 @@ pre[class*='language-'] {
 .token.tag,
 .token.function,
 .token.atrule {
-  color: var(--primary);
+  color: var(--accent);
 }
 
 .token.boolean,
@@ -534,7 +675,7 @@ pre[class*='language-'] {
 .token.symbol,
 .token.deleted,
 .token.important {
-  color: oklch(52% 0.13 70);
+  color: var(--amber);
 }
 
 .token.selector,
@@ -544,7 +685,7 @@ pre[class*='language-'] {
 .token.builtin,
 .token.inserted,
 .token.attr-value {
-  color: oklch(48% 0.09 160);
+  color: var(--green);
 }
 
 .token.bold {
@@ -557,9 +698,18 @@ pre[class*='language-'] {
 
 /* ------------------------------------------------------------------ motion */
 
+@media (max-width: 640px) {
+  .cat-canvas {
+    width: 215px;
+    height: 74px;
+    top: -62px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-cursor,
-  .iterm-cursor {
+  .iterm-cursor,
+  .terminal-dot {
     animation: none;
   }
 

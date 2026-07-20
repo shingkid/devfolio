@@ -214,8 +214,8 @@ mentoring engineers.`,
         name: `Jane Seah`,
         short_name: `janeseah`,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#2d4a9e`, // cobalt — matches the terminal prompt
+        background_color: `#fefaf1`,
+        theme_color: `#823b9f`, // purple — matches the terminal prompt accent
         display: `minimal-ui`,
         icon: `src/images/icon.png`,
       },
