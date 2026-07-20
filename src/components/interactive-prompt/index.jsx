@@ -176,6 +176,9 @@ const InteractiveSession = ({ metadata = {}, posts = [] }) => {
       '  open <file>     open resume.pdf, github, or linkedin',
       '  theme <mode>    light, dark, or auto (follow the system)',
       '  ls · pwd · whoami · clear · tea',
+      '',
+      'the cat (bottom right): click or space to pet · drag it anywhere ·',
+      'double-click to send it home',
     ].join('\n');
   };
 

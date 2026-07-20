@@ -1,16 +1,117 @@
 import React from 'react';
 
-// Pixel-art cats perched on the terminal's corner, ported from the
-// cat-terminal prototype (recovered/cat-terminal-prototype.html).
+const POS_KEY = 'cat-pos';
+
+// Pixel-art cats living on the page as a floating pet — parked at the
+// viewport's bottom-right corner by default, draggable anywhere, ported
+// from the cat-terminal prototype (recovered/cat-terminal-prototype.html).
 //
 // Two skeletons — drawResident (front-facing, symmetric, for whoever is
 // stationary at "home") and drawCat (side-profile walking, for whoever is in
 // motion) — are shared by both characters via getPalette(kind), so the pose
 // follows the action, not a fixed per-cat identity. Fixed "fur" palettes
 // (not theme-tokened) since a cat's colour is its own material, not UI chrome.
-// Click the cat (or press Space) to pet it.
+// Click the cat (or press Space) to pet it; drag to move it; double-click to
+// send it back home to the corner.
 const Cat = () => {
   const canvasRef = React.useRef(null);
+  const wrapRef = React.useRef(null);
+  // pet() lives inside the animation effect's closure; the wrapper's
+  // pointer handling reaches it through this ref
+  const petRef = React.useRef(() => {});
+  const dragRef = React.useRef(null);
+  const posRef = React.useRef(null);
+  // null = the default corner (CSS right/bottom); {x, y} once dragged
+  const [pos, setPos] = React.useState(null);
+  posRef.current = pos;
+
+  const clampPos = (p) => {
+    const rect = wrapRef.current?.getBoundingClientRect();
+    const w = rect ? rect.width : 310;
+    const h = rect ? rect.height : 86;
+    return {
+      x: Math.min(Math.max(0, p.x), Math.max(0, window.innerWidth - w)),
+      y: Math.min(Math.max(0, p.y), Math.max(0, window.innerHeight - h)),
+    };
+  };
+
+  // restore where the visitor last left the cat
+  React.useEffect(() => {
+    try {
+      const saved = JSON.parse(localStorage.getItem(POS_KEY) || 'null');
+      if (saved && typeof saved.x === 'number' && typeof saved.y === 'number') {
+        setPos(clampPos(saved));
+      }
+    } catch (e) {
+      // corrupt or unavailable storage: the cat just starts at home
+    }
+  }, []);
+
+  // keep a moved cat inside the viewport when the window shrinks
+  React.useEffect(() => {
+    const onWindowResize = () => {
+      if (posRef.current) setPos(clampPos(posRef.current));
+    };
+    window.addEventListener('resize', onWindowResize);
+    return () => window.removeEventListener('resize', onWindowResize);
+  }, []);
+
+  const onPointerDown = (event) => {
+    const rect = wrapRef.current.getBoundingClientRect();
+    dragRef.current = {
+      startX: event.clientX,
+      startY: event.clientY,
+      offX: event.clientX - rect.left,
+      offY: event.clientY - rect.top,
+      moved: false,
+    };
+    wrapRef.current.setPointerCapture(event.pointerId);
+  };
+
+  const onPointerMove = (event) => {
+    const drag = dragRef.current;
+    if (!drag) return;
+    if (!drag.moved) {
+      const dist = Math.hypot(
+        event.clientX - drag.startX,
+        event.clientY - drag.startY
+      );
+      if (dist < 6) return; // still a click until it clearly moves
+      drag.moved = true;
+    }
+    event.preventDefault();
+    setPos(
+      clampPos({ x: event.clientX - drag.offX, y: event.clientY - drag.offY })
+    );
+  };
+
+  const onPointerUp = () => {
+    const drag = dragRef.current;
+    dragRef.current = null;
+    if (!drag) return;
+    if (!drag.moved) {
+      petRef.current();
+    } else {
+      try {
+        localStorage.setItem(POS_KEY, JSON.stringify(posRef.current));
+      } catch (e) {
+        // private mode: the spot just won't persist
+      }
+    }
+  };
+
+  const onPointerCancel = () => {
+    dragRef.current = null;
+  };
+
+  const goHome = () => {
+    setPos(null);
+    try {
+      localStorage.removeItem(POS_KEY);
+    } catch (e) {
+      // nothing stored, nothing lost
+    }
+  };
 
   React.useEffect(() => {
     const canvas = canvasRef.current;
@@ -1009,7 +1110,7 @@ const Cat = () => {
       }
     };
 
-    canvas.addEventListener('click', pet);
+    petRef.current = pet;
     window.addEventListener('keydown', onKeydown);
     window.addEventListener('resize', resize);
 
@@ -1068,20 +1169,30 @@ const Cat = () => {
 
     return () => {
       if (rafId !== null) cancelAnimationFrame(rafId);
-      canvas.removeEventListener('click', pet);
+      petRef.current = () => {};
       window.removeEventListener('keydown', onKeydown);
       window.removeEventListener('resize', resize);
     };
   }, []);
 
   return (
-    <canvas
-      ref={canvasRef}
-      className="cat-canvas"
-      width="620"
-      height="172"
+    <div
+      ref={wrapRef}
+      className="cat-pet"
+      style={
+        pos
+          ? { left: pos.x, top: pos.y, right: 'auto', bottom: 'auto' }
+          : undefined
+      }
+      onPointerDown={onPointerDown}
+      onPointerMove={onPointerMove}
+      onPointerUp={onPointerUp}
+      onPointerCancel={onPointerCancel}
+      onDoubleClick={goHome}
       aria-hidden="true"
-    />
+    >
+      <canvas ref={canvasRef} className="cat-canvas" width="620" height="172" />
+    </div>
   );
 };
 

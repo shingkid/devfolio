@@ -2,8 +2,8 @@ import React from 'react';
 
 import Cat from '../cat';
 
-// The whole transcript lives inside one terminal window, with the pixel
-// cats perched on its top corner.
+// The whole transcript lives inside one terminal window; the pixel cats
+// float over the page as a movable pet, parked bottom-right by default.
 const Layout = ({ children }) => {
   const [login, setLogin] = React.useState('Last login: janeseah.com');
 
@@ -16,8 +16,8 @@ const Layout = ({ children }) => {
 
   return (
     <div className="term">
+      <Cat />
       <div className="terminal-wrap">
-        <Cat />
         <div className="terminal">
           <div className="terminal-chrome">
             <span className="terminal-dot" aria-hidden="true" />
