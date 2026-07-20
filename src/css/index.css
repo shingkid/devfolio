@@ -496,12 +496,16 @@ input:focus-visible {
 }
 
 .iterm-log {
-  white-space: pre-wrap;
   overflow-wrap: anywhere;
 }
 
 .iterm-log .cmd-prompt {
   font-weight: 400;
+}
+
+/* one-off text commands (help, ls, jokes) — tighter than section blocks */
+.iterm-entry {
+  margin-top: 1.25rem;
 }
 
 .iterm-log-cmd {
@@ -511,6 +515,19 @@ input:focus-visible {
 .iterm-log-out {
   color: var(--muted);
   margin-bottom: 0.625rem;
+  white-space: pre-wrap;
+}
+
+/* the suggested command, typed out ahead of the cursor */
+.iterm-ghost {
+  color: var(--dim);
+  white-space: pre;
+}
+
+/* full transcript fallback for crawlers / no-JS — hidden the moment we
+   know JS is available (html.js is set before first paint) */
+html.js .transcript-static {
+  display: none;
 }
 
 .iterm-row {

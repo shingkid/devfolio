@@ -6,7 +6,7 @@ exports.onRenderBody = ({ setPreBodyComponents }) => {
     React.createElement('script', {
       key: 'theme-init',
       dangerouslySetInnerHTML: {
-        __html: `try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t)}}catch(e){}`,
+        __html: `document.documentElement.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t)}}catch(e){}`,
       },
     }),
   ]);

@@ -1,48 +1,17 @@
 import { graphql } from 'gatsby';
-import get from 'lodash/get';
 import React from 'react';
 
-import Header from '../components/header';
-import InteractivePrompt from '../components/interactive-prompt';
+import InteractiveSession from '../components/interactive-prompt';
 import Layout from '../components/layout';
-import SectionAbout from '../components/section-about';
-import SectionBlog from '../components/section-blog';
-import SectionExperience from '../components/section-experience';
-import SectionEducation from '../components/section-education';
-import SectionProjects from '../components/section-projects';
-import SectionResearch from '../components/section-research';
-import SectionSkills from '../components/section-skills';
-import SectionHobbies from '../components/section-hobbies';
 import Seo from '../components/seo';
 
 const Index = ({ data }) => {
-  const about = get(data, 'site.siteMetadata.about', false);
-  const projects = get(data, 'site.siteMetadata.projects', false);
-  const research = get(data, 'site.siteMetadata.research', false);
   const posts = data.allMarkdownRemark.edges;
-  const experience = get(data, 'site.siteMetadata.experience', false);
-  const education = get(data, 'site.siteMetadata.education', false);
-  const skills = get(data, 'site.siteMetadata.skills', false);
-  const hobbies = get(data, 'site.siteMetadata.hobbies', false);
-  const noBlog = !posts || !posts.length;
 
   return (
     <Layout>
       <Seo />
-      <Header metadata={data.site.siteMetadata} noBlog={noBlog} />
-      {about && <SectionAbout about={about} />}
-      {experience && experience.length && (
-        <SectionExperience experience={experience} />
-      )}
-      {projects && projects.length && <SectionProjects projects={projects} />}
-      {research && research.length && <SectionResearch research={research} />}
-      {!noBlog && <SectionBlog posts={posts} />}
-      {education && education.length && (
-        <SectionEducation education={education} />
-      )}
-      {skills && skills.length && <SectionSkills skills={skills} />}
-      {hobbies && hobbies.length && <SectionHobbies hobbies={hobbies} />}
-      <InteractivePrompt metadata={data.site.siteMetadata} />
+      <InteractiveSession metadata={data.site.siteMetadata} posts={posts} />
     </Layout>
   );
 };
